@@ -1,6 +1,21 @@
 import {createGlobalStyle} from "styled-components";
 
+import GhandiSansRegular from './fontes/GandhiSans-Regular.otf'
+import GhandiSansBold from './fontes/GandhiSans-Bold.otf'
+
+
 const EstilosGlobais = createGlobalStyle`
+    
+    @font-face {
+        font-family: 'GhandiSansRegular';
+        src: local('Ghandi Sans Regular'), local('GhandiSansRegular'), url(${GhandiSansRegular});
+    }
+    
+    @font-face {
+        font-family: 'GhandiSansBold';
+        src: local('Ghandi Sans Bold'), local('GhandiSansBold'), url(${GhandiSansBold});
+    }
+    
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
@@ -11,9 +26,12 @@ const EstilosGlobais = createGlobalStyle`
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 
+
+
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
+  font-family: GhandiSansRegular, sans-serif;
 }
 
 /* Sections
